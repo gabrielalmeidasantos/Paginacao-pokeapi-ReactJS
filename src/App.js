@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container } from "./components/container";
+import { Pokemons } from "./components/pokemons";
+import { Nav } from "./components/nav";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [url, setUrl] = React.useState("https://pokeapi.co/api/v2/pokemon");
+    const [pokemons, setPokemons] = React.useState([]);
+
+    React.useEffect(() => {
+        fetch(url)
+            .then((response) => response.json())
+            .then((json) => setPokemons(json))
+            .catch((err) => console.log(err));
+    }, [url]);
+
+    return (
+        <Container>
+            {pokemons.length !== 0 && (
+                <>
+                    <Nav setUrl={setUrl} anterior={pokemons.previous} proximo={pokemons.next} />
+                    <Pokemons pokemons={pokemons}/>
+                </>
+            )}
+        </Container>
+    );
 }
 
 export default App;

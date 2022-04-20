@@ -1,0 +1,13 @@
+.cardPokemon{
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    border: solid 1px #000;
+    cursor: pointer;
+}
+
+.cardPokemon img{
+    width: 100%;
+    max-width: 100%;
+}
