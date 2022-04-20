@@ -5,7 +5,7 @@
 
 ![image](https://user-images.githubusercontent.com/48861829/164339845-2702de12-3298-4c8f-96fe-47d93fe658a9.png)
 
-> O projeto basicamente faz requisições em URLs adicionadas a cada X segundos e retorna o status code da requisição http
+> O projeto basicamente faz a listagem de pokemons de acordo com a PokeApi e sua paginação
 
 
 ## 💻 Pré-requisitos
