@@ -16,7 +16,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 ## 🚀 Instalando 
 
-Para instalar o Monitorador de api, siga estas etapas:
+Para instalar o Projeto, siga estas etapas:
 
 Na raiz do projeto, execute:
 ```
